@@ -1,4 +1,4 @@
-## Скрипт для скачивания фото с instagram аккаунтов
+## Скрипт для скачивания фотографий пользователей instagram
 
 [![Github All Releases](https://img.shields.io/github/downloads/YarikMix/instagram-photos/total.svg)]()
 

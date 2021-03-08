@@ -94,16 +94,16 @@ class InstDownloader:
             print("Пользователя с таким именем не существует")
             exit()
 
+        # Создаём папку с фотографиями пользователя, если её нет
+        if not self.user_photos_path.exists():
+            self.user_photos_path.mkdir()
+            print(f"Создаём папку с фотографиями {self.target}")
+            
         print("{} {} {}".format(
             numeral.choose_plural(len(media_ids), "Будет, Будут, Будут"),
             numeral.choose_plural(len(media_ids), "скачена, скачены, скачены"),
             numeral.get_plural(len(media_ids), "фотография, фотографии, фотографий")
         ))
-
-        # Создаём папку с фотографиями пользователя, если её нет
-        if not self.user_photos_path.exists():
-            self.user_photos_path.mkdir()
-            print(f"Создаём папку с фотографиями {self.target}")
 
         time_start = time.time()
         self.download_photos(media_ids)
